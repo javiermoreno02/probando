@@ -2,27 +2,23 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Empleados del departamento</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
 </head>
 
-<body>
-    <div id="content">
-        <h1>Gestor de Empleados</h1>
-        <h2>Lista de empleados</h2>
-        <h3>{{ departamento.nombre }}</h3>
-        {% if empleados %}
-        <ul>
-            {% for e in empleados %}
-            <li>
-                <a href="/appEmpresaDjango/empleados/{{ e.id }}">{{ e.nombre}}</a>
-            </li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No hay empleados creados.</p>
-        {% endif %}
-    </div>
-</body>
+{% extends "base.html" %} {% block titulo %} Empleados del departamento {% endblock %} {% block contenido %}
+<h2>Lista de empleados</h2>
+<h3>{{ departamento.nombre }}</h3>
+{% if empleados %}
+<ul>
+    {% for e in empleados %}
+    <li>
+        <a href="/appProyectoDjango/empleados/{{ e.id }}">{{ e.nombre}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No hay empleados creados.</p>
+{% endif %} {% endblock %}
 
 </html>
