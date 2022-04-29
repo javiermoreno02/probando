@@ -11,5 +11,9 @@ urlpatterns = [
 
 ]
 
+<<<<<<< HEAD
 # probando 3# 
 
+=======
+# probando 3# 
+>>>>>>> b1bb7f1f1f501ad72cf0381cf6c72c8b708ae818
